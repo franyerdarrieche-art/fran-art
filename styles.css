@@ -1,0 +1,16 @@
+body{
+   
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: aliceblue;
+    background-color: rgb(50, 11, 192);
+    padding: 15px;
+    border: 20px solid black;
+    width: 300px;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 auto;
+    
+}
+

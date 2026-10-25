@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto.fr</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a mi página web</h1>
+        <h2>Tutorial para aprender a programar en C#</h2>
+    </header>
+
+    <main>
+        <p>
+            C# es un lenguaje muy usado con la plataforma .NET para crear programas de consola,
+            aplicaciones web, escritorio y videojuegos con Unity. En este tutorial aprenderás
+            desde los conceptos más básicos, como variables y strings, hasta clases y objetos.
+        </p>
+
+        <a
+            class="boton-pdf"
+            href="Manual para crear un sitio web en GitHub Pages con formato APA 7.pdf
+            "
+            target="_blank"
+            rel="noopener"
+        >
+            Ver manual en PDF
+        </a>
+
+        <section>
+            <h2>Variables y tipos de datos</h2>
+
+            <p>Una variable es un espacio con nombre donde guardas información.</p>
+
+            <pre><code>string nombre = "Juan";
+int edad = 18;
+double promedio = 17.5;
+bool estudia = true;</code></pre>
+
+            <ul>
+                <li><code>string</code>: guarda texto.</li>
+                <li><code>int</code>: guarda números enteros.</li>
+                <li><code>double</code>: guarda números decimales.</li>
+                <li><code>bool</code>: guarda valores verdaderos o falsos.</li>
+                <li><code>char</code>: guarda un solo carácter.</li>
+            </ul>
+
+            <pre><code>char letra = 'A';
+bool tieneVida = true;</code></pre>
+
+            <p>Para mostrar variables en pantalla:</p>
+
+            <pre><code>string nombre = "Ana";
+int edad = 16;
+
+Console.WriteLine(nombre);
+Console.WriteLine(edad);
+Console.WriteLine("Me llamo " + nombre + " y tengo " + edad + " años.");</code></pre>
+        </section>
+
+        <section>
+            <h2>Strings</h2>
+
+            <p>Un <code>string</code> sirve para guardar palabras, frases o cualquier texto.</p>
+
+            <pre><code>string jugador = "Alex";
+string mensaje = "Bienvenido al juego";</code></pre>
+
+            <p>Puedes unir texto con variables usando el símbolo <code>+</code>.</p>
+
+            <pre><code>string nombre = "Luis";
+string saludo = "Hola, " + nombre;
+
+Console.WriteLine(saludo);</code></pre>
+
+            <p>También puedes contar los caracteres de un texto:</p>
+
+            <pre><code>string palabra = "Programar";
+
+Console.WriteLine(palabra.Length);</code></pre>
+
+            <p>Para pedir texto al usuario:</p>
+
+            <pre><code>Console.WriteLine("Escribe tu nombre:");
+string nombre = Console.ReadLine();
+
+Console.WriteLine("Hola, " + nombre);</code></pre>
+        </section>
+
+        <section>
+            <h2>Operadores básicos</h2>
+
+            <pre><code>int numero1 = 10;
+int numero2 = 5;
+
+Console.WriteLine(numero1 + numero2);
+Console.WriteLine(numero1 - numero2);
+Console.WriteLine(numero1 * numero2);
+Console.WriteLine(numero1 / numero2);</code></pre>
+
+            <ul>
+                <li><code>==</code>: igual a.</li>
+                <li><code>!=</code>: diferente de.</li>
+                <li><code>&gt;</code>: mayor que.</li>
+                <li><code>&lt;</code>: menor que.</li>
+                <li><code>&gt;=</code>: mayor o igual que.</li>
+                <li><code>&lt;=</code>: menor o igual que.</li>
+                <li><code>&amp;&amp;</code>: y.</li>
+                <li><code>||</code>: o.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Condicionales</h2>
+
+            <p>Los condicionales permiten que el programa tome decisiones.</p>
+
+            <pre><code>int edad = 17;
+
+if (edad >= 18)
+{
+    Console.WriteLine("Eres mayor de edad.");
+}
+else
+{
+    Console.WriteLine("Eres menor de edad.");
+}</code></pre>
+
+            <p>
+                Recuerda: <code>=</code> sirve para asignar valores y
+                <code>==</code> sirve para comparar valores.
+            </p>
+
+            <pre><code>string usuario = "admin";
+
+if (usuario == "admin")
+{
+    Console.WriteLine("Acceso permitido.");
+}
+else
+{
+    Console.WriteLine("Acceso denegado.");
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Bucles</h2>
+
+            <h3>Bucle for</h3>
+
+            <p>Se usa cuando sabes cuántas veces quieres repetir algo.</p>
+
+            <pre><code>for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine("Nivel " + i);
+}</code></pre>
+
+            <h3>Bucle while</h3>
+
+            <p>Se usa mientras una condición siga siendo verdadera.</p>
+
+            <pre><code>int vidas = 3;
+
+while (vidas > 0)
+{
+    Console.WriteLine("Todavía tienes vidas.");
+    vidas--;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Métodos</h2>
+
+            <p>Un método es un bloque de código con nombre que puedes usar varias veces.</p>
+
+            <pre><code>static void Saludar()
+{
+    Console.WriteLine("¡Hola!");
+}
+
+Saludar();
+Saludar();</code></pre>
+
+            <p>Un método también puede recibir datos:</p>
+
+            <pre><code>static void Saludar(string nombre)
+{
+    Console.WriteLine("Hola, " + nombre);
+}
+
+Saludar("María");
+Saludar("Pedro");</code></pre>
+        </section>
+
+        <section>
+            <h2>Clases y objetos</h2>
+
+            <p>
+                Una clase es una plantilla y un objeto es algo creado a partir de esa plantilla.
+            </p>
+
+            <pre><code>class Jugador
+{
+    public string Nombre;
+    public int Vida;
+    public int Nivel;
+}</code></pre>
+
+            <p>Así se crea un objeto de la clase <code>Jugador</code>:</p>
+
+            <pre><code>Jugador jugador1 = new Jugador();
+
+jugador1.Nombre = "Leo";
+jugador1.Vida = 100;
+jugador1.Nivel = 1;
+
+Console.WriteLine(jugador1.Nombre);</code></pre>
+
+            <h3>Método dentro de una clase</h3>
+
+            <pre><code>class Jugador
+{
+    public string Nombre;
+    public int Vida;
+
+    public void MostrarEstado()
+    {
+        Console.WriteLine(Nombre + " tiene " + Vida + " puntos de vida.");
+    }
+}</code></pre>
+
+            <pre><code>Jugador jugador1 = new Jugador();
+
+jugador1.Nombre = "Sofía";
+jugador1.Vida = 100;
+
+jugador1.MostrarEstado();</code></pre>
+        </section>
+
+        <section>
+            <h2>Constructor</h2>
+
+            <p>Un constructor asigna valores a un objeto al momento de crearlo.</p>
+
+            <pre><code>class Jugador
+{
+    public string Nombre;
+    public int Vida;
+
+    public Jugador(string nombre, int vida)
+    {
+        Nombre = nombre;
+        Vida = vida;
+    }
+}</code></pre>
+
+            <pre><code>Jugador jugador1 = new Jugador("Sofía", 100);
+
+Console.WriteLine(jugador1.Nombre);</code></pre>
+        </section>
+
+        <section>
+            <h2>Ejercicios para practicar</h2>
+
+            <ol>
+                <li>Pide al usuario su nombre y muestra un saludo.</li>
+                <li>Pide dos números y muestra su suma.</li>
+                <li>Pide una edad y determina si la persona es mayor de edad.</li>
+                <li>Muestra los números del 1 al 10 usando un bucle <code>for</code>.</li>
+                <li>Crea una clase <code>Personaje</code> con nombre, vida y ataque.</li>
+                <li>Crea dos objetos de tipo <code>Personaje</code> y muestra sus datos.</li>
+                <li>Agrega un método <code>Atacar()</code> que muestre un mensaje de ataque.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
